@@ -75,13 +75,13 @@
         </Button>
 
         <!-- 7 8 9 × -->
-        <Button Name="Seven" Grid.Row="6" Grid.Column="1">
+        <Button Name="Seven" Grid.Row="6" Grid.Column="1" Click="Seven_Click">
             <TextBlock Text="7" />
         </Button>
-        <Button Name="Eight" Grid.Row="6" Grid.Column="2">
+        <Button Name="Eight" Grid.Row="6" Grid.Column="2" Click="Eight_Click">
             <TextBlock Text="8" />
         </Button>
-        <Button Name="Nine" Grid.Row="6" Grid.Column="3">
+        <Button Name="Nine" Grid.Row="6" Grid.Column="3" Click="Nine_Click">
             <TextBlock Text="9" />
         </Button>
         <Button Name="Multiply" Grid.Row="6" Grid.Column="4">
@@ -89,13 +89,13 @@
         </Button>
 
         <!-- 4 5 6 - -->
-        <Button Name="Four" Grid.Row="7" Grid.Column="1">
+        <Button Name="Four" Grid.Row="7" Grid.Column="1" Click="Four_Click">
             <TextBlock Text="4" />
         </Button>
-        <Button Name="Five" Grid.Row="7" Grid.Column="2">
+        <Button Name="Five" Grid.Row="7" Grid.Column="2" Click="Five_Click">
             <TextBlock Text="5" />
         </Button>
-        <Button Name="Six" Grid.Row="7" Grid.Column="3">
+        <Button Name="Six" Grid.Row="7" Grid.Column="3" Click="Six_Click">
             <TextBlock Text="6" />
         </Button>
         <Button Name="Subtraction" Grid.Row="7" Grid.Column="4">
@@ -103,13 +103,13 @@
         </Button>
 
         <!-- 1 2 3 + -->
-        <Button Name="One" Grid.Row="8" Grid.Column="1">
+        <Button Name="One" Grid.Row="8" Grid.Column="1" Click="One_Click">
             <TextBlock Text="1" />
         </Button>
-        <Button Name="Two" Grid.Row="8" Grid.Column="2">
+        <Button Name="Two" Grid.Row="8" Grid.Column="2" Click="Two_Click">
             <TextBlock Text="2" />
         </Button>
-        <Button Name="Three" Grid.Row="8" Grid.Column="3">
+        <Button Name="Three" Grid.Row="8" Grid.Column="3" Click="Three_Click">
             <TextBlock Text="3" />
         </Button>
         <Button Name="Addition" Grid.Row="8" Grid.Column="4">
@@ -120,7 +120,7 @@
         <Button Name="PlusMinus" Grid.Row="9" Grid.Column="1">
             <TextBlock Text="±" />
         </Button>
-        <Button Name="Zero" Grid.Row="9" Grid.Column="2">
+        <Button Name="Zero" Grid.Row="9" Grid.Column="2" Click="Zero_Click">
             <TextBlock Text="0" />
         </Button>
         <Button Name="Dot" Grid.Row="9" Grid.Column="3">
