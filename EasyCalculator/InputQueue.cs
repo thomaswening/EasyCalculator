@@ -60,5 +60,45 @@ namespace EasyCalculator
 
             return expression;
         }
+
+        // TO DO: operator precedence!!!
+        public int EvaluateExpression(List<string> expression)
+        {
+            int parameter1;
+            int parameter2;
+            string operand;
+            int intermediateResult = 0;
+
+            while (expression.Count > 1)
+            {
+                parameter1 = Convert.ToInt32(expression[0]);
+                parameter2 = Convert.ToInt32(expression[2]);
+                operand = expression[1];
+
+                switch (operand)
+                {
+                    case "+":
+                        intermediateResult = parameter1 + parameter2;
+                        break;
+
+                    case "-":
+                        intermediateResult = parameter1 - parameter2;
+                        break;
+
+                    case "*":
+                        intermediateResult = parameter1 * parameter2;
+                        break;
+
+                    case "/":
+                        intermediateResult = parameter1 / parameter2;
+                        break;
+                }
+
+                expression.RemoveRange(0, 2);
+                expression[0] = intermediateResult.ToString();
+            }
+
+            return intermediateResult;
+        }
     }
 }
