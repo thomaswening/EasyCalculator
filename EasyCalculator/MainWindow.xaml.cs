@@ -56,18 +56,11 @@ namespace EasyCalculator
         public string MakeDisplayString()
         {
             StringBuilder stringBuilder = new();
-            bool predecessorIsDigit = true;
 
             foreach (char input in inputs)
             {
                 stringBuilder.Append(input);
-                if (!predecessorIsDigit) stringBuilder.Append(' ');
-
-                if (Char.IsDigit(input)) predecessorIsDigit = true;
-                else predecessorIsDigit = false;
             }
-
-            if (predecessorIsDigit == false) stringBuilder.Remove(stringBuilder.Length - 1, 1);
 
             return stringBuilder.ToString();
         }
@@ -80,6 +73,32 @@ namespace EasyCalculator
         {
             AddInput(input);
             return MakeDisplayString();
+        }
+
+        public List<string> GetExpression(string input)
+        {
+            List<string> expression = new();
+            StringBuilder stringBuilder = new();
+            char lastSign = input[0];
+            int index = 0;
+
+            foreach (char sign in input)
+            {
+                if (!(Char.IsDigit(sign) && Char.IsDigit(lastSign)))
+                {
+                    expression.Add(stringBuilder.ToString());
+                    stringBuilder.Clear();
+                }
+
+                stringBuilder.Append(sign);
+
+                if (index == input.Length - 1) expression.Add(stringBuilder.ToString());
+
+                lastSign = sign;
+                index++;
+            }
+
+            return expression;
         }
     }
 }
