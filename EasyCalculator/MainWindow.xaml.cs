@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleCalculator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,11 +21,14 @@ namespace EasyCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        public InputQueue inputQueue;
+        private InputQueue inputQueue;
+        private Calculation calculation;
+
         public MainWindow()
         {
             InitializeComponent();
             inputQueue = new();
+            calculation = new();
         }
 
         private void UpdateInputDisplay() => InputDisplay.Text = inputQueue.MakeDisplayString();
