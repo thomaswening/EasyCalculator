@@ -67,7 +67,7 @@
         <Button Name="Clear" Grid.Row="5" Grid.Column="2">
             <TextBlock Text="C" />
         </Button>
-        <Button Name="BackSpace" Grid.Row="5" Grid.Column="3">
+        <Button Name="BackSpace" Grid.Row="5" Grid.Column="3" Click="BackSpace_Click">
             <TextBlock Text="←" />
         </Button>
         <Button Name="Divide" Grid.Row="5" Grid.Column="4">
