@@ -115,8 +115,8 @@ namespace ConsoleCalculator
         /// <exception cref="ArgumentException">Thrown when the input string ends in a symbol that cannot be parsed.</exception>
         public static List<Symbol> ConvertToSymbols(string pInput)
         {
-            List<Symbol> symbols = new ();
-            StringBuilder stringBuilder = new ();
+            List<Symbol> symbols = new();
+            StringBuilder stringBuilder = new();
             int i = 0;
 
             CheckForConsecutiveSymbols(pInput);
