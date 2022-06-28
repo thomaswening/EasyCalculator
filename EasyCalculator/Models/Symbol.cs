@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace ConsoleCalculator
 {
@@ -75,12 +78,12 @@ namespace ConsoleCalculator
 
                 if (SymbolConst.DOT == element && SymbolConst.DOT == predecessor)
                 {
-                    throw new ArgumentException($"The symbol {element} must not appear twice consecutively. Please revise.", "pInput");
+                    throw new ArgumentException($"The symbol {element} must not appear twice consecutively. Please revise.", nameof(pInput));
                 }
 
                 if (SymbolConst.Operators.Contains(element) && SymbolConst.Operators.Contains(predecessor))
                 {
-                    throw new ArgumentException($"An operator must not follow after another. Please revise and consider using a pair of brackets.", "pInput");
+                    throw new ArgumentException($"An operator must not follow after another. Please revise and consider using a pair of brackets.", nameof(pInput));
                 }
             }
         }
@@ -100,8 +103,8 @@ namespace ConsoleCalculator
                 if (element == SymbolConst.BRACKET_RIGHT) openBrackets--;
             }
 
-            if (openBrackets > 0) throw new ArgumentException("The input contains unmatched left brackets. Please revise.", "pInput");
-            else if (openBrackets < 0) throw new ArgumentException("The input contains unmatched right brackets. Please revise.", "pInput");
+            if (openBrackets > 0) throw new ArgumentException("The input contains unmatched left brackets. Please revise.", nameof(pInput));
+            else if (openBrackets < 0) throw new ArgumentException("The input contains unmatched right brackets. Please revise.", nameof(pInput));
         }
 
         /// <summary>
@@ -152,7 +155,7 @@ namespace ConsoleCalculator
                         }
 
                         if (SymbolConst.Operators.Contains(element)) symbols.Add(new Symbol(element.ToString()));
-                        else throw new ArgumentException($"The symbol {element} is not allowed as input. Please revise.", "pInput");
+                        else throw new ArgumentException($"The symbol {element} is not allowed as input. Please revise.", nameof(pInput));
                     }
                 }
 
@@ -166,7 +169,7 @@ namespace ConsoleCalculator
                     {
                         if (!IsNumber(testString))
                         {
-                            throw new ArgumentException("The input cannot be parsed. Please revise.", "pInput");
+                            throw new ArgumentException("The input cannot be parsed. Please revise.", nameof(pInput));
                         }
                         else symbols.Add(new Symbol(testString));
                     }

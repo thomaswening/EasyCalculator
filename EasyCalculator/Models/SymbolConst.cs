@@ -1,4 +1,6 @@
-﻿namespace ConsoleCalculator
+﻿using System.Collections.Generic;
+
+namespace ConsoleCalculator
 {
     /// <summary>
     /// Defines the different kinds of symbols there are.
