@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleCalculator
+namespace Models
 {
     /// <summary>
     /// Defines a mathematical expression that may be evaluated in a calculation.

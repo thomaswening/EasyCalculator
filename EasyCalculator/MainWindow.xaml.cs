@@ -1,4 +1,4 @@
-﻿using ConsoleCalculator;
+﻿using Models;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,14 +9,12 @@ namespace EasyCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        private InputQueue inputQueue;
-        private Calculation calculation;
+        private readonly InputQueue inputQueue;
 
         public MainWindow()
         {
             InitializeComponent();
             inputQueue = new();
-            calculation = new();
         }
 
         private void UpdateInputDisplay() => InputDisplay.Text = inputQueue.MakeDisplayString();
@@ -44,5 +42,23 @@ namespace EasyCalculator
 
         #endregion
 
+        private void Dot_Click(object sender, RoutedEventArgs e)
+        {
+            inputQueue.AddDot();
+            UpdateInputDisplay();
+        }
+
+        private void Operator_Click(object sender, RoutedEventArgs e)
+        {
+            Button source = (Button)e.OriginalSource;
+            inputQueue.AddOperator(source.Name);
+            UpdateInputDisplay();
+        }
+
+        private void PlusMinus_Click(object sender, RoutedEventArgs e)
+        {
+            inputQueue.Negate();
+            UpdateInputDisplay();
+        }
     }
 }

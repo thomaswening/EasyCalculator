@@ -70,7 +70,7 @@
         <Button Name="BackSpace" Grid.Row="5" Grid.Column="3" Click="BackSpace_Click">
             <TextBlock Text="←" />
         </Button>
-        <Button Name="Divide" Grid.Row="5" Grid.Column="4">
+        <Button Name="Divide" Grid.Row="5" Grid.Column="4" Click="Operator_Click">
             <TextBlock Text="÷" />
         </Button>
 
@@ -84,7 +84,7 @@
         <Button Name="Nine" Grid.Row="6" Grid.Column="3" Click="Digit_Click">
             <TextBlock Text="9" />
         </Button>
-        <Button Name="Multiply" Grid.Row="6" Grid.Column="4">
+        <Button Name="Multiply" Grid.Row="6" Grid.Column="4" Click="Operator_Click">
             <TextBlock Text="×" />
         </Button>
 
@@ -98,7 +98,7 @@
         <Button Name="Six" Grid.Row="7" Grid.Column="3" Click="Digit_Click">
             <TextBlock Text="6" />
         </Button>
-        <Button Name="Subtraction" Grid.Row="7" Grid.Column="4">
+        <Button Name="Minus" Grid.Row="7" Grid.Column="4" Click="Operator_Click">
             <TextBlock Text="-" />
         </Button>
 
@@ -112,18 +112,18 @@
         <Button Name="Three" Grid.Row="8" Grid.Column="3" Click="Digit_Click">
             <TextBlock Text="3" />
         </Button>
-        <Button Name="Addition" Grid.Row="8" Grid.Column="4">
+        <Button Name="Plus" Grid.Row="8" Grid.Column="4" Click="Operator_Click">
             <TextBlock Text="+" />
         </Button>
 
         <!-- ± 0 . = -->
-        <Button Name="PlusMinus" Grid.Row="9" Grid.Column="1">
+        <Button Name="PlusMinus" Grid.Row="9" Grid.Column="1" Click="PlusMinus_Click">
             <TextBlock Text="±" />
         </Button>
         <Button Name="Zero" Grid.Row="9" Grid.Column="2" Click="Digit_Click">
             <TextBlock Text="0" />
         </Button>
-        <Button Name="Dot" Grid.Row="9" Grid.Column="3">
+        <Button Name="Dot" Grid.Row="9" Grid.Column="3" Click="Dot_Click">
             <TextBlock Text="." />
         </Button>
         <Button Name="Equality" Grid.Row="9" Grid.Column="4">

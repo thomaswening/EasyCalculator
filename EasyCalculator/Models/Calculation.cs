@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleCalculator
+namespace Models
 {
     /// <summary>
     /// Represents a calculation that may be evaluated.

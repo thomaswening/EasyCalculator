@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleCalculator
+namespace Models
 {
     /// <summary>
     /// Represents a single symbol in a mathematical expression.
     /// </summary>
-    internal class Symbol
+    public class Symbol
     {
         public string Content { get; set; }
         public string Kind { get; set; }
@@ -18,6 +18,17 @@ namespace ConsoleCalculator
         {
             Content = pInput;
             Kind = FindSymbolKind(Content);
+        }
+
+        public Symbol(string pInput, string pKind)
+        {
+            Content = pInput;
+            Kind = pKind;
+        }
+
+        public void AddToContent(string pInput)
+        {
+            Content += pInput;
         }
 
         static public string FindSymbolKind(string pInput)

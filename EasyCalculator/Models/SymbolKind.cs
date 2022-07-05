@@ -1,4 +1,4 @@
-﻿namespace ConsoleCalculator
+﻿namespace Models
 {
     internal struct SymbolKind
     {

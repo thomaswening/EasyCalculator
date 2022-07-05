@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ConsoleCalculator
+namespace Models
 {
     /// <summary>
     /// Defines the different kinds of symbols there are.
